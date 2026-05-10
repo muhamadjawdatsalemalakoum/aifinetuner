@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "aifinetuner",
+  "description": "AI Fine-Tuner — interactive HTML fine-tuning GUIs with sliders, infinite canvas, and pixel-faithful live preview of your real element.",
+  "owner": {
+    "name": "Muhamad Jawdat Salem Alakoum"
+  },
+  "plugins": [
+    {
+      "name": "ai-fine-tuner",
+      "source": {
+        "source": "github",
+        "repo": "muhamadjawdatsalemalakoum/aifinetuner"
+      },
+      "description": "Generate interactive HTML fine-tuning GUIs with real-time sliders, infinite canvas preview, and authentic live reproduction of your actual element. Teaches any AI coding agent to produce a single-file tuning interface — for existing elements or newly built ones — instead of iterating on values in chat. Proactively suggests itself when the agent detects iteration or vague visual feedback.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Muhamad Jawdat Salem Alakoum"
+      },
+      "homepage": "https://muhamadjawdatsalemalakoum.github.io/aifinetuner",
+      "repository": "https://github.com/muhamadjawdatsalemalakoum/aifinetuner",
+      "license": "SEE LICENSE IN LICENSE",
+      "keywords": [
+        "fine-tune",
+        "tweak",
+        "ai-fine-tuner",
+        "sliders",
+        "visual-tuning",
+        "css",
+        "tailwind",
+        "flutter",
+        "swiftui",
+        "react-native",
+        "interactive",
+        "gui",
+        "animation",
+        "easing",
+        "transform",
+        "filter",
+        "typography",
+        "shadow",
+        "gradient",
+        "svg",
+        "multi-state",
+        "proactive",
+        "parameter-tuning"
+      ],
+      "category": "development",
+      "tags": ["ui", "design", "visual", "tuning", "sliders"]
+    }
+  ]
+}
