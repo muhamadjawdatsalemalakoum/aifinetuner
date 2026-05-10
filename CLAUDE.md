@@ -11,8 +11,10 @@ This repo is the plugin source — not a runtime application. There is no build 
 ## Architecture
 
 ```
-fine-tune-plugin/
-├── .claude-plugin/plugin.json   # Plugin manifest (name, version, keywords)
+ai-fine-tuner/
+├── .claude-plugin/
+│   ├── plugin.json              # Plugin manifest (name, version, keywords)
+│   └── marketplace.json         # Marketplace catalog (so `claude plugin install …@<git-url>` works)
 ├── skills/ai-fine-tuner/
 │   └── SKILL.md                 # Claude Code skill definition (YAML frontmatter + instructions)
 ├── AGENTS.md                    # Universal spec — the core document any AI agent reads

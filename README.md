@@ -97,11 +97,16 @@ One round-trip instead of ten. Perfect values because you can see them live. Zer
 The fastest way. Works in CLI, VS Code, and JetBrains — one install, everywhere.
 
 ```bash
-# Install from GitHub
+# Install from GitHub (one-step)
 claude plugin install ai-fine-tuner@https://github.com/muhamadjawdatsalemalakoum/aifinetuner.git
 
-# Or load from a local directory (for development/testing)
-claude --plugin-dir ./fine-tune-plugin
+# Or two-step (equivalent — useful if you want to inspect the marketplace first)
+claude plugin marketplace add muhamadjawdatsalemalakoum/aifinetuner
+claude plugin install ai-fine-tuner@aifinetuner
+
+# Or load from a local clone (for development/testing)
+git clone https://github.com/muhamadjawdatsalemalakoum/aifinetuner.git
+claude --plugin-dir ./aifinetuner
 ```
 
 **Manage plugins:**
@@ -155,7 +160,7 @@ The IDE extensions use the same skill directory as the CLI. Install via CLI (abo
 4. Enable **Code execution** in **Settings > Capabilities**
 5. The skill appears in the `/` menu — Claude selects it automatically when relevant
 
-> To create the ZIP: `cd fine-tune-plugin && zip -r ai-fine-tuner.zip skills/ai-fine-tuner/ assets/templates/ AGENTS.md`
+> To create the ZIP: `zip -r ai-fine-tuner.zip skills/ai-fine-tuner/ assets/templates/ AGENTS.md` (run from the repo root)
 
 ### Claude Desktop — Cowork Plugins
 

@@ -53,6 +53,7 @@ echo "  1. Required files"
 assert_file "AGENTS.md" "$ROOT/AGENTS.md"
 assert_file "SKILL.md" "$ROOT/skills/ai-fine-tuner/SKILL.md"
 assert_file "plugin.json" "$ROOT/.claude-plugin/plugin.json"
+assert_file "marketplace.json" "$ROOT/.claude-plugin/marketplace.json"
 assert_file "LICENSE" "$ROOT/LICENSE"
 assert_file "README.md" "$ROOT/README.md"
 assert_file "CLAUDE.md" "$ROOT/CLAUDE.md"
@@ -162,6 +163,15 @@ echo "  11. JSON validity"
 result="$(python3 -m json.tool "$ROOT/.claude-plugin/plugin.json" >/dev/null 2>&1 && echo true || echo false)"
 assert "plugin.json is valid JSON" "$result"
 assert_not_contains "plugin.json" '"hooks"' "$ROOT/.claude-plugin/plugin.json"
+
+# marketplace.json must be valid and contain the ai-fine-tuner plugin entry
+# so `claude plugin install ai-fine-tuner@<git-url>` resolves (see GitHub issue #1)
+result="$(python3 -m json.tool "$ROOT/.claude-plugin/marketplace.json" >/dev/null 2>&1 && echo true || echo false)"
+assert "marketplace.json is valid JSON" "$result"
+assert_contains "marketplace.json" '"name": "ai-fine-tuner"' "$ROOT/.claude-plugin/marketplace.json"
+assert_contains "marketplace.json" '"plugins"' "$ROOT/.claude-plugin/marketplace.json"
+result="$(cd "$ROOT" && python3 -c "import json,sys; d=json.load(open('.claude-plugin/marketplace.json')); sys.exit(0 if any(p.get('name')=='ai-fine-tuner' for p in d.get('plugins',[])) else 1)" 2>/dev/null && echo true || echo false)"
+assert "marketplace.json lists 'ai-fine-tuner' in plugins" "$result"
 echo ""
 
 # ─── 12. WEBSITE SECTIONS ────────────────────────────
