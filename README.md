@@ -16,6 +16,11 @@
 
 **Stop iterating in chat. Drag sliders instead.**
 
+<video autoplay loop muted playsinline width="100%">
+  <source src="media/dashboard-card-tuner.mp4" type="video/mp4">
+  <img src="media/dashboard-card-tuner.gif" alt="AI Fine-Tuner — Dashboard Card demo">
+</video>
+
 Shadows, animations, colors, typography, transforms, easing curves, SVG attributes — anything visual, with live preview. Every tuner is **bespoke** — built from YOUR element, YOUR parameters, on a production-grade template. The agent fills in the blanks, not the infrastructure. Any language, any stack, zero dependencies.
 
 Works with Flutter, SwiftUI, React Native, CSS, Tailwind, SVG, JSON — or anything visual. The agent translates your element to a web preview, you drag sliders to get it right, and the output translates back to your language on copy. Not limited to software development — use it for any task where visual precision and interactive exploration matter.
