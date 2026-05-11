@@ -16,10 +16,7 @@
 
 **Stop iterating in chat. Drag sliders instead.**
 
-<video autoplay loop muted playsinline width="100%">
-  <source src="media/dashboard-card-tuner.mp4" type="video/mp4">
-  <img src="media/dashboard-card-tuner.gif" alt="AI Fine-Tuner — Dashboard Card demo">
-</video>
+![AI Fine-Tuner — Dashboard Card demo](media/dashboard-card-tuner.gif)
 
 Shadows, animations, colors, typography, transforms, easing curves, SVG attributes — anything visual, with live preview. Every tuner is **bespoke** — built from YOUR element, YOUR parameters, on a production-grade template. The agent fills in the blanks, not the infrastructure. Any language, any stack, zero dependencies.
 
