@@ -1,17 +1,3 @@
-```
-    ╔═══════════════════════════════════════════════════╗
-    ║                                                   ║
-    ║          ◆  A I   F I N E - T U N E R  ◆          ║
-    ║                                                   ║
-    ║             ═══●═══   ═══●═══   ═══●═══           ║
-    ║                ▲         ▲         ▲              ║
-    ║              shadow    radius    color            ║
-    ║                                                   ║
-    ║              drag. see. decide. ship.             ║
-    ║                                                   ║
-    ╚═══════════════════════════════════════════════════╝
-```
-
 # AI Fine-Tuner
 
 **Stop iterating in chat. Drag sliders instead.**
